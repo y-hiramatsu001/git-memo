@@ -4,5 +4,18 @@
 ###公式サイト
 [https://git-scm.com/](https://git-scm.com/)
 
-
 ###git log
+
+1行で表示
+```
+git log --oneline
+```
+
+
+
+
+
+
+
+
+
