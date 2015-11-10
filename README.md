@@ -185,6 +185,16 @@ img/*.*
 ```
 
 
+###git skip-worktree
+
+ファイルを無視したいとき
+```
+git update-index --skip-worktree [ファイル名]
+```
+ファイル無視の設定を元に戻したい時
+```
+git update-index --no-skip-worktree [ファイル名]
+```
 
 
 
