@@ -196,6 +196,9 @@ git update-index --skip-worktree [ファイル名]
 git update-index --no-skip-worktree [ファイル名]
 ```
 
-
+###.gitkeepファイルをからディレクトリに作成
+```
+find . -type d -empty -not -path './.git*' -exec touch {}\/.gitkeep \;
+```
 
 
