@@ -201,4 +201,10 @@ git update-index --no-skip-worktree [ファイル名]
 find . -type d -empty -not -path './.git*' -exec touch {}\/.gitkeep \;
 ```
 
+###コミットをまとめる(これでHEADから4つ分のコミットをまとめられます)
+```
+git rebase -i HEAD~4
+```
+
+
 
