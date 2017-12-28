@@ -208,6 +208,6 @@ git rebase -i HEAD~4
 
 ###コミット間の変更ファイル一覧を出力
 ```
-git diff --stat コミット1 コミット2
+git diff --stat --name-only コミット1 コミット2
 ```
 
