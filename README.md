@@ -219,3 +219,18 @@ git clean -f
 // 削除実行せずに削除予定のファイル一覧を表示
 git clean -n
 ```
+
+###ファイル単位でリセット
+```
+git checkout HEAD -- hoge.txt
+```
+
+###tigでコミット間の差分を見たい時
+```
+tig <コミットID>..<コミットID>
+```
+
+###空コミット
+```
+git commit --allow-empty -m "コメント"
+```
