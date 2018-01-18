@@ -234,3 +234,15 @@ tig <コミットID>..<コミットID>
 ```
 git commit --allow-empty -m "コメント"
 ```
+
+###git stashを復活させる方法
+```
+// 候補の sha1 がいくつか出てくる(長く開発していると、結構多く候補が出てきます)
+git fsck | awk '/dangling commit/ {print $3}'
+
+// 一つ一つの sha1 の内容を確認
+git show --summary 候補のsha1
+
+// 復活させる
+git cherry-pick -n -m1 見つけたsha1
+```
