@@ -1,11 +1,11 @@
 # git-memo
 個人的によく使うgitコマンドです
 
-###公式サイト
+## 公式サイト
 [https://git-scm.com/](https://git-scm.com/)
 
 
-###git log
+## git log
 
 1行で表示
 ```
@@ -18,7 +18,7 @@ git log --oneline -5
 ```
 
 
-###git add
+## git add
 
 追加したファイルを全部追加
 ```
@@ -26,7 +26,7 @@ git add .
 ```
 
 
-###git checkout
+## git checkout
 
 ブランチ作成と切り替え
 ```
@@ -44,7 +44,7 @@ git checkout -b ブランチ名 origin/ブランチ名
 ```
 
 
-###git branch
+## git branch
 
 ブランチ表示
 ```
@@ -67,7 +67,7 @@ git push --delete origin ブランチ名　←これでも行けるかも
 ```
 
 
-###git reset
+## git reset
 
 指定したリビジョンまで戻す（リビジョンを指定することで操作履歴も戻すことができる）
 ```
@@ -80,7 +80,7 @@ git reset --hard ORIG_HEAD
 ```
 
 
-###git reflog
+## git reflog
 
 操作履歴を1行で4件表示する
 ```
@@ -88,7 +88,7 @@ git reflog -n 4
 ```
 
 
-###git diff
+## git diff
 
 指定した範囲のリビジョンの差分ファイルを出力する
 ```
@@ -96,7 +96,7 @@ git diff 開始リビジョン..終了リビジョン --name-only | git checkout
 ```
 
 
-###git tag
+## git tag
 
 
 タグを付ける
@@ -115,7 +115,7 @@ git push --delete origin refs/tags/タグ名
 ```
 
 
-###git stash
+## git stash
 
 変更を退避させる
 ```
@@ -134,7 +134,7 @@ git stash pop stash@{0}
 ```
 
 
-###git rebase
+## git rebase
 
 マージ元のブランチへ移動
 ```
@@ -161,7 +161,7 @@ git rebase master
 ```
 
 
-###無視するファイル指定
+## 無視するファイル指定
 ```
 # シャープで始めるとコメント行になる
 
@@ -185,7 +185,7 @@ img/*.*
 ```
 
 
-###git skip-worktree
+## git skip-worktree
 
 ファイルを無視したいとき
 ```
@@ -196,22 +196,22 @@ git update-index --skip-worktree [ファイル名]
 git update-index --no-skip-worktree [ファイル名]
 ```
 
-###.gitkeepファイルをからディレクトリに作成
+## .gitkeepファイルをからディレクトリに作成
 ```
 find . -type d -empty -not -path './.git*' -exec touch {}\/.gitkeep \;
 ```
 
-###コミットをまとめる(これでHEADから4つ分のコミットをまとめられます)
+## コミットをまとめる(これでHEADから4つ分のコミットをまとめられます)
 ```
 git rebase -i HEAD~4
 ```
 
-###コミット間の変更ファイル一覧を出力
+## コミット間の変更ファイル一覧を出力
 ```
 git diff --stat --name-only コミット1 コミット2
 ```
 
-###作業ディレクトリから追跡対象外のファイル（Untracked files）を削除
+## 作業ディレクトリから追跡対象外のファイル（Untracked files）を削除
 ```
 // 削除実行
 git clean -f
@@ -220,22 +220,22 @@ git clean -f
 git clean -n
 ```
 
-###ファイル単位でリセット
+## ファイル単位でリセット
 ```
 git checkout HEAD -- hoge.txt
 ```
 
-###tigでコミット間の差分を見たい時
+## tigでコミット間の差分を見たい時
 ```
 tig <コミットID>..<コミットID>
 ```
 
-###空コミット
+## 空コミット
 ```
 git commit --allow-empty -m "コメント"
 ```
 
-###git stashを復活させる方法
+## git stashを復活させる方法
 ```
 // 候補の sha1 がいくつか出てくる(長く開発していると、結構多く候補が出てきます)
 git fsck | awk '/dangling commit/ {print $3}'
