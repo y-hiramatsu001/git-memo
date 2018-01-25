@@ -213,8 +213,8 @@ git diff --stat --name-only コミット1 コミット2
 
 ## 作業ディレクトリから追跡対象外のファイル（Untracked files）を削除
 ```
-// 削除実行
-git clean -f
+// 削除実行(-f：強制削除、-d：ディレクトリを対象にする)
+git clean -fd
 
 // 削除実行せずに削除予定のファイル一覧を表示
 git clean -n
