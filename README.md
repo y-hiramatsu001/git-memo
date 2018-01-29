@@ -17,6 +17,16 @@ git log --oneline
 git log --oneline -5
 ```
 
+コミットメッセージを検索
+```
+git log --grep 検索文字列
+```
+
+ファイル単位で履歴を見る
+```
+git log -p ファイルパス
+```
+
 
 ## git add
 
