@@ -76,6 +76,16 @@ git push origin :ブランチ名
 git push --delete origin ブランチ名　←これでも行けるかも
 ```
 
+マージされたブランチを表示(例：developにマージされたかの場合)
+```
+git branch --merged develop
+```
+
+マージされてないブランチを表示
+```
+git branch --no-merged develop
+```
+
 
 ## git reset
 
