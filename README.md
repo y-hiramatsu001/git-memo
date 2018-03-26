@@ -53,6 +53,11 @@ git checkout ブランチ名
 git checkout -b ブランチ名 origin/ブランチ名
 ```
 
+特定のファイルを特定のコミットに戻す
+```
+git checkout コミット番号 ファイルパス
+```
+
 
 ## git branch
 
