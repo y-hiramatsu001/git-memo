@@ -27,6 +27,11 @@ git log --grep 検索文字列
 git log -p ファイルパス
 ```
 
+リネームや移動する前のログも辿れる
+```
+git log --follow
+```
+
 
 ## git add
 
